@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="styles_AcercadeNosotros.css" rel="stylesheet" type="text/css" />
+    <!--se adjuntan los estilos css al html-->
+    <title>Infinity</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="./index.html">Inicio</a></li>
+          <li><a href="#"> Acerca de nosotros</a></li>
+          <li><a href="./Servicios.html"> Servicios</a></li>
+          <li>
+            <a href="./contactanos.html">Contactanos</a>
+          </li>
+        </ul>
+      </nav>
+     
+    </header>
+    <div class="fixed">
+      <h2>Somos una empresa dedicada a servicios de belleza con certificados internacionales realizados
+        en brazil. Ofrecemos diversos tratamientos con profesionales expertos en su área, se utilizan 
+        productos de alta calidad para mayores resultados !Enfocate en tu belleza, y deja salir tu diamante en bruto!
+      </h2> 
+      <main>
+        <video id ="video" src="./video_servicio.mp4" controls>video_Local</video>
+        <audio id="audio" src="./audio_presentacion.mp3"controls>audio_presentacion</audio>
+      </main>
+     
+    </div>
+ 
+    
+    <script>
+      document.addEventListener('DOMContentLoaded',()=>{
+        //encuentra los documentos del DOM
+       const video=document.getElementById("video");
+       const audio=document.getElementById("audio");
+      
+        video.play();
+        audio.volume=0.2;
+      
+       video.addEventListener('play', ()=> 
+       {
+        console.log('El video ha comenzado a reproducirse.');
+        audio.currentTime=video.currentTime;
+        audio.play();
+    
+        });
+       video.addEventListener('pause', () => audio.pause());
+       
+         //sincronización de audio y video
+       video.addEventListener('seeked',()=>{
+         audio.currentTime=video.currentTime;
+       });
+      });
+    </script>
+  </body>
+
+  
+</html>

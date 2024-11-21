@@ -1,0 +1,131 @@
+body{
+    background-color:  rgb(93, 60, 116);
+    }
+    .titulo{
+        text-align: center;
+        color: rgb(168, 170, 22);
+        font-style:oblique ;
+        display: grid;
+        grid-row: 1;
+        grid-column: 1/2;
+        position: relative;
+        padding-left: 52%;
+        font-size: 355%;
+    
+    
+    }
+    ul {
+
+        font-size: 110%;
+        font-style:oblique ;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        position: relative; 
+        justify-content: space-around;
+        list-style-type: none;
+
+    }
+
+    
+    li:hover a {
+       border-radius: 5%;
+       background-color:  rgb(97, 20, 104);
+       position: relative;
+       
+    }
+
+    a{
+         text-decoration: none; /* Elimina el subrayado de los enlaces */
+         color: aliceblue; /* Color del texto */
+         padding: 10px 15px; /* Espaciado interno para el área del clic */
+         display: block; /* Hace que el área del clic cubra el li */
+         transition: background-color 0.3s ease; /* Transición suave */
+       
+    }
+
+    .eslogan_inicio{
+
+        
+        font-family:  cursive;
+        display: grid;
+        overflow: hidden;
+        position: relative;
+        letter-spacing: 3px;
+        grid-row: 2/4;
+        grid-column: 1/3;
+        padding: 5% 3%;
+        font-size: 90%;
+        text-align: center;
+        background-color:  rgb(10, 1, 46);
+        opacity: 100%;
+        color: rgb(247, 239, 244);
+    }
+
+
+    .imagen{
+        opacity: 95%;
+        border-radius: 50%;
+        height: 45%;
+        width: 80%;
+       position: relative;
+       overflow: hidden;
+       display: grid;
+      grid-column:3/4 ;
+      grid-row: 1/2;
+      margin-left: 55%;
+      border: 1px solid rgb(83, 52, 105);
+    }
+
+    .imagen2{
+        opacity: 30%;
+        height: 30%;
+        width: 50%;
+       position: relative;
+       overflow: hidden;
+       display: grid;
+      grid-column: 1/2;
+      grid-row: 1/2;
+      margin-left: 45%;
+      margin-top: 55%;
+    }
+
+    .fixed{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        
+    }
+    
+    .circulo{
+        grid-column:2/3 ;
+        border-radius: 200%;
+        background-color: rgb(10, 1, 46);
+        height: 65%;
+        width: 115%;
+        padding: 15%;
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr ;
+        grid-template-columns: 1fr 1fr ;
+        overflow: hidden;
+        position: relative;
+        border: 2px solid rgb(196, 176, 3);
+    
+    
+    }
+    
+
+    @media (max-width: 750px) {
+        ul{
+            font-size: 70%;
+        }
+
+        .fixed{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+            
+        }
+        
+    }

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="styles_contactanos.css" rel="stylesheet" type="text/css" />
+    <!--se adjuntan los estilos css al html-->
+    <title>Infinity</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="./index.html">Inicio</a></li>
+          <li><a href="./AcercadeNosotros.html"> Acerca de nosotros</a></li>
+          <li><a href="./Servicios.html"> Servicios</a></li>
+          <li>
+            <a href="./contactanos.html">Contactanos</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <h2> CITAS O RESOLUCIONES</h2>
+
+    <div class="formulario">
+
+        <form action="formulario.php" method="POST">
+
+            <label for="nombre  " class="nombre"> Nombre </label>
+            <input type="text" id="nombre" name="nombre" required>  
+
+           <label for=" apellido" class="apellido">Apellido</label>
+            <input type="text" id="apellido" name="apellido" required> 
+            <br>
+            <br>
+            <label for="telefono " class="telefono">Telefóno</label>
+            <input type="number" id="telefono" name="telefono" required>
+           
+            <label for="correo " class="correo">Correo</label>
+            <input type="email" id="email" name="email" required>  
+           <br>
+           <br>
+            <label for="motivo_contacto " class="motivo_contacto">Motivo de contacto</label>
+            <input type="motivo" id="motivo" name="motivo" required>
+           <br>
+           <br>
+            <button> Enviar </button>
+        </form>
+
+
+    </div>
+
+ 
+
+
+
+  </body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles_servicios1.css" rel="stylesheet" type="text/css"> <!--se adjuntan los estilos css al html-->
+    <title>Infinity</title>
+
+
+</head>
+<body>
+    <header>  
+        <nav> 
+            <ul> 
+                <li ><a href="./index.html">Inicio</a>
+                   
+                </li>
+                <li><a href="./AcercadeNosotros.html"> Acerca de nosotros</a>
+                  
+                </li>
+                <li><a href="./Servicios.html"> Servicios</a>
+                   
+                </li>
+                <li>
+                    <a href="./contactanos.html">Contactanos</a>
+                    
+                </li>
+            </ul>
+        </nav>
+    </header>
+  
+    <div class="fixed2">
+        
+        <img src="./maquillaje.png" class="imagen1">
+        <img src="./manicura.png" class="imagen2">
+        <img src="./peluqueria.png" class="imagen3">
+        <h1>SERVICIOS Y PRECIOS</h1>
+        <h2 class="maquillaje"><a href="#">Maquillaje</a>
+        <button class="boton_tabla" onclick="mostrar_tabla('tabla_maquillaje')">Precios</button></h2>
+
+        <h2 class="peluqueria"><a href="#">Peluqueria</a>
+        <button class="boton_tabla" onclick="mostrar_tabla('tabla_peluqueria')">precios</button></h2>
+
+        <h2 class="manicura"><a href="#">Manicura</a>
+            <button class="boton_tabla" onclick="mostrar_tabla('tabla_manicura')">Precios</button></h2>
+
+
+
+        <table class="tabla" id="tabla_maquillaje">
+            <tr> <!--table row-->
+                <th> Detalle</th> <!--table header-->
+                <th> Precio</th>
+            </tr>
+            <tr>
+                <td>Maquillaje de Novia </td><!--table data-->
+                <td>$40,00</td>
+            </tr>
+            <tr>
+                <td>Maquillaje de quinceañera </td><!--table data-->
+                <td>$25,00</td>
+            </tr>
+            <tr>
+                <td>Maquillaje casual </td><!--table data-->
+                <td>$15,00</td>
+            </tr>
+        </table>
+
+        <table class="tabla" id="tabla_manicura">
+            <tr> <!--table row-->
+                <th> Detalle</th> <!--table header-->
+                <th> Precio</th>
+            </tr>
+            <tr>
+                <td>Uñas acrilicas </td><!--table data-->
+                <td>$25,00</td>
+            </tr>
+            <tr>
+                <td>Manicura Normal</td><!--table data-->
+                <td>$10,00</td>
+            </tr>
+            <tr>
+                <td>Manicura y pedicura normal</td><!--table data-->
+                <td>$30,00</td>
+            </tr>
+        </table>
+
+
+        <table class="tabla" id="tabla_peluqueria">
+            <tr> <!--table row-->
+                <th> Detalle</th> <!--table header-->
+                <th> Precio</th>
+            </tr>
+            <tr>
+                <td>corte cabello </td><!--table data-->
+                <td>$15,00</td>
+            </tr>
+            <tr>
+                <td>tinte</td><!--table data-->
+                <td>$40,00</td>
+            </tr>
+            <tr>
+                <td>alisado</td><!--table data-->
+                <td>$100,00</td>
+            </tr>
+        </table>
+
+
+    </div>
+
+
+    
+        
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            // Código adicional al cargar el DOM, si es necesario
+            console.log('DOM completamente cargado');
+
+
+        });
+
+        function mostrar_tabla(tablaId) {
+
+            // Oculta todas las tablas
+            const tablas = document.querySelectorAll('.tabla');
+
+            Array.from(tablas).filter(
+                tabla => tabla.id !== tablaId
+            ).forEach(tabla => {
+                tabla.style.display = 'none';
+            });
+
+            // Selecciona la tabla que queremos mostrar
+            const tablaAmostrar = document.getElementById(tablaId);
+            
+            // Verifica si la tabla ya es visible
+            const esVisible = tablaAmostrar.style.display === 'table';
+            
+            // Muestra u oculta la tabla dependiendo de su estado actual
+            if (!esVisible) {
+                tablaAmostrar.style.display = 'table';
+            }else{
+                tablaAmostrar.style.display = 'none';
+            }
+
+        }
+    </script>
+</body>
+</html>
