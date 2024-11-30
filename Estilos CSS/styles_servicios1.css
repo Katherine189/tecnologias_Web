@@ -135,3 +135,56 @@ h2:hover {
             }
 
 }
+
+    
+.imagen_facebook{
+    width: 4%;
+  
+}
+.footer{
+    display: flexbox;
+    justify-content: space-between;
+    color: aliceblue;
+    align-items: center;
+    padding: auto;
+    background-color: black;
+    position: relative;
+    margin-bottom: 5%;
+
+}
+.correo{
+ position: absolute;
+ margin-right: 10px;
+ align-items: center;
+ display: flex;
+ padding-right:5%;
+ right: 0;
+ margin-left: 10px;
+}
+.facebook{
+    position: absolute;
+    margin-left: 10px;
+    align-items: center;
+    display: flex;
+}
+.texto_facebook{
+    text-align: center;
+    margin-top: 15px;
+}
+.imagen_logo{
+    width: 4%;
+  
+}
+.aviso_copyrigth{
+    position: relative;
+    text-align: center;
+    flex-grow: 1;
+    font-size: 14px;
+}
+.imagen_correo{
+    width: 5%;
+}
+.texto_correo{
+ margin-left: 10px;
+}
+
