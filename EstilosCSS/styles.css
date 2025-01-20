@@ -1,140 +1,356 @@
-body{
-    background-color:  rgb(93, 60, 116);
+body {
+    background-color: rgb(93, 60, 116);
+}
+
+main {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+
+#info {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, minmax(0, 1fr));
+
+    article {
+        -webkit-box-shadow: 4px 4px 13px 0px rgba(0, 0, 0, 0.43);
+        -moz-box-shadow: 4px 4px 13px 0px rgba(0, 0, 0, 0.43);
+        box-shadow: 4px 4px 13px 0px rgba(0, 0, 0, 0.43);
+        border-radius: 15px;
+        -moz-border-radius: 15px;
+        -webkit-border-radius: 15px;
+        background-color: #d4b9ea;
+        border: 1px solid #000000;
+        margin-bottom: 5px;
+        padding: 30px;
     }
-    .titulo{
-        text-align: center;
-        color: rgb(168, 170, 22);
-        font-style:oblique ;
+}
+
+
+/* start index */
+.titulo {
+    text-align: center;
+    color: rgb(168, 170, 22);
+    font-style: oblique;
+    display: grid;
+    grid-row: 1;
+    grid-column: 1/2;
+    position: relative;
+    padding-left: 23%;
+    font-size: 355%;
+}
+
+ul {
+    font-size: 110%;
+    font-style: oblique;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    position: relative;
+    justify-content: space-around;
+    list-style-type: none;
+}
+
+li:hover a {
+    border-radius: 5%;
+    background-color: rgb(97, 20, 104);
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+    /* Elimina el subrayado de los enlaces */
+    color: aliceblue;
+    /* Color del texto */
+    padding: 10px 15px;
+    /* Espaciado interno para el área del clic */
+    display: block;
+    /* Hace que el área del clic cubra el li */
+    transition: background-color 0.3s ease;
+    /* Transición suave */
+    text-align: center;
+}
+
+.eslogan_inicio {
+    font-family: cursive;
+    display: grid;
+    overflow: hidden;
+    position: relative;
+    letter-spacing: 3px;
+    grid-row: 2/4;
+    grid-column: 1/3;
+    padding: 5% 3%;
+    font-size: 90%;
+    text-align: center;
+    background-color: rgb(10, 1, 46);
+    opacity: 100%;
+    color: rgb(247, 239, 244);
+}
+
+.imagen {
+    opacity: 95%;
+    border-radius: 50%;
+    height: 20%;
+    width: 80%;
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    grid-column: 3/4;
+    grid-row: 1/2;
+    margin-left: 55%;
+    border: 1px solid rgb(83, 52, 105);
+}
+
+.imagen2 {
+    opacity: 30%;
+    height: 15%;
+    width: 50%;
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    margin-left: 25%;
+    margin-top: 100%;
+}
+
+.fixed {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+.circulo {
+    grid-column: 2/3;
+    border-radius: 200%;
+    background-color: rgb(10, 1, 46);
+    height: 35%;
+    width: 115%;
+    padding: 15%;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    overflow: hidden;
+    position: relative;
+    border: 2px solid rgb(196, 176, 3);
+}
+
+@media (max-width: 750px) {
+    ul {
+        font-size: 70%;
+    }
+
+    .fixed {
         display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+}
+
+.imagen_facebook {
+    width: 4%;
+}
+
+.footer {
+    display: flexbox;
+    justify-content: space-between;
+    color: aliceblue;
+    align-items: center;
+    padding: auto;
+    background-color: black;
+    position: relative;
+    margin-bottom: 5%;
+}
+
+.correo {
+    position: absolute;
+    margin-right: 10px;
+    align-items: center;
+    display: flex;
+    padding-right: 5%;
+    right: 0;
+    margin-left: 10px;
+}
+
+.facebook {
+    position: absolute;
+    margin-left: 10px;
+    align-items: center;
+    display: flex;
+}
+
+.texto_facebook {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.imagen_logo {
+    width: 4%;
+}
+
+.aviso_copyrigth {
+    position: relative;
+    text-align: center;
+    flex-grow: 1;
+    font-size: 14px;
+}
+
+.imagen_correo {
+    width: 5%;
+}
+
+.texto_correo {
+    margin-left: 10px;
+}
+
+/* end index */
+
+/* start services */
+#services {
+    h1 {
+        color: aliceblue;
+        font-size: 250%;
+        padding: 0px 60px;
+        font-style: oblique;
+        grid-row: 1/2;
+        grid-column: 1/3;
+        margin-left: 55%;
+    }
+
+    h2 {
+        font-size: 95%;
+    }
+
+    video {
         grid-row: 1;
         grid-column: 1/2;
-        position: relative;
-        padding-left: 52%;
-        font-size: 355%;
-    
-    
     }
-    ul {
 
-        font-size: 110%;
-        font-style:oblique ;
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    ul {
+        font-size: 80%;
+        font-style: oblique;
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+            "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
         display: grid;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr 1fr;
-        position: relative; 
+        position: relative;
         justify-content: space-around;
         list-style-type: none;
-
     }
 
-    
     li:hover a {
-       border-radius: 5%;
-       background-color:  rgb(97, 20, 104);
-       position: relative;
-       
-    }
-
-    a{
-         text-decoration: none; /* Elimina el subrayado de los enlaces */
-         color: aliceblue; /* Color del texto */
-         padding: 10px 15px; /* Espaciado interno para el área del clic */
-         display: block; /* Hace que el área del clic cubra el li */
-         transition: background-color 0.3s ease; /* Transición suave */
-       
-    }
-
-    .eslogan_inicio{
-
-        
-        font-family:  cursive;
-        display: grid;
-        overflow: hidden;
+        border-radius: 5%;
+        background-color: rgb(97, 20, 104);
         position: relative;
-        letter-spacing: 3px;
-        grid-row: 2/4;
-        grid-column: 1/3;
-        padding: 5% 3%;
-        font-size: 90%;
-        text-align: center;
-        background-color:  rgb(10, 1, 46);
-        opacity: 100%;
-        color: rgb(247, 239, 244);
     }
 
+    a {
+        display: block;
+        /* Hace que el área del clic cubra el li */
+        padding: 10px 15px;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+        color: aliceblue;
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+            "Lucida Sans", Arial, sans-serif, Times, serif;
+        font-size: 150%;
+    }
 
-    .imagen{
-        opacity: 95%;
-        border-radius: 50%;
-        height: 45%;
+    h2:hover {
+        color: brown;
+    }
+
+    .imagen1 {
+        margin-left: 20%;
+        opacity: 80%;
         width: 80%;
-       position: relative;
-       overflow: hidden;
-       display: grid;
-      grid-column:3/4 ;
-      grid-row: 1/2;
-      margin-left: 55%;
-      border: 1px solid rgb(83, 52, 105);
+        margin-bottom: 0%;
+        grid-row: 1/2;
+        grid-column: 1/2;
     }
 
-    .imagen2{
-        opacity: 30%;
+    .maquillaje {
+        margin-left: 40%;
+        margin-top: 50%;
+        grid-row: 1/2;
+        grid-column: 1/2;
+    }
+
+    .manicura {
+        grid-row: 1/3;
+        grid-column: 2/3;
+        margin-left: 35%;
+        margin-top: 85%;
+    }
+
+    .imagen2 {
+        width: 18%;
+        grid-row: 1/2;
+        grid-column: 2/3;
+        margin-left: 40%;
+        margin-top: 40%;
+    }
+
+    .peluqueria {
+        grid-row: 1/2;
+        grid-column: 3/3;
+        margin-top: 50%;
+        margin-left: 30%;
+    }
+
+    .imagen3 {
+        margin-left: 20%;
         height: 30%;
-        width: 50%;
-       position: relative;
-       overflow: hidden;
-       display: grid;
-      grid-column: 1/2;
-      grid-row: 1/2;
-      margin-left: 45%;
-      margin-top: 55%;
+        width: 40%;
+        grid-row: 1/2;
+        grid-column: 3/3;
     }
 
-    .fixed{
+    .fixed2 {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows: 1fr ;
-        
-    }
-    
-    .circulo{
-        grid-column:2/3 ;
-        border-radius: 200%;
-        background-color: rgb(10, 1, 46);
-        height: 65%;
-        width: 115%;
-        padding: 15%;
-        display: grid;
-        grid-template-rows: 1fr 1fr 1fr ;
-        grid-template-columns: 1fr 1fr ;
-        overflow: hidden;
-        position: relative;
-        border: 2px solid rgb(196, 176, 3);
-    
-    
-    }
-    
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
 
-    @media (max-width: 750px) {
-        ul{
-            font-size: 70%;
+        .tabla {
+            display: none;
         }
 
-        .fixed{
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-            grid-template-rows: 1fr 1fr 1fr 1fr;
-            
+        .tabla th,
+        .tabla td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            color: aliceblue;
         }
-        
+
+        .tabla tr {
+            background-color: #e6e4eb;
+        }
+
+        .tabla td {
+            color: black;
+        }
+
+        .tabla th {
+            background-color: #911786;
+            color: white;
+            text-align: left;
+        }
+
+        tr:hover {
+            background-color: rgb(217, 190, 235);
+        }
     }
-    
-    .imagen_facebook{
+
+    .imagen_facebook {
         width: 4%;
-      
     }
-    .footer{
+
+    .footer {
         display: flexbox;
         justify-content: space-between;
         color: aliceblue;
@@ -143,41 +359,370 @@ body{
         background-color: black;
         position: relative;
         margin-bottom: 5%;
-    
     }
-    .correo{
-     position: absolute;
-     margin-right: 10px;
-     align-items: center;
-     display: flex;
-     padding-right:5%;
-     right: 0;
-     margin-left: 10px;
+
+    .correo {
+        position: absolute;
+        margin-right: 10px;
+        align-items: center;
+        display: flex;
+        padding-right: 5%;
+        right: 0;
+        margin-left: 10px;
     }
-    .facebook{
+
+    .facebook {
         position: absolute;
         margin-left: 10px;
         align-items: center;
         display: flex;
     }
-    .texto_facebook{
+
+    .texto_facebook {
         text-align: center;
         margin-top: 15px;
     }
-    .imagen_logo{
+
+    .imagen_logo {
         width: 4%;
-      
     }
-    .aviso_copyrigth{
+
+    .aviso_copyrigth {
         position: relative;
         text-align: center;
         flex-grow: 1;
         font-size: 14px;
     }
-    .imagen_correo{
+
+    .imagen_correo {
         width: 5%;
     }
-    .texto_correo{
-     margin-left: 10px;
+
+    .texto_correo {
+        margin-left: 10px;
     }
-  
+}
+
+/* end service */
+
+/* start contact */
+#contact {
+    h1 {
+        color: aliceblue;
+        font-size: 250%;
+        padding: 0px 60px;
+        font-style: oblique;
+        grid-row: 1/2;
+        grid-column: 1/3;
+        margin-left: 55%;
+    }
+
+    h2 {
+        font-size: 95%;
+    }
+
+    video {
+        grid-row: 1;
+        grid-column: 1/2;
+    }
+
+    ul {
+        font-size: 80%;
+        font-style: oblique;
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+            "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        position: relative;
+        justify-content: space-around;
+        list-style-type: none;
+    }
+
+    li:hover a {
+        border-radius: 5%;
+        background-color: rgb(97, 20, 104);
+        position: relative;
+    }
+
+    a {
+        display: block;
+        /* Hace que el área del clic cubra el li */
+        padding: 10px 15px;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+        color: aliceblue;
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+            "Lucida Sans", Arial, sans-serif, Times, serif;
+        font-size: 150%;
+    }
+
+    h2 {
+        color: rgb(237, 239, 240);
+        font-size: 50px;
+        font-family: sans-serif;
+        text-align: center;
+    }
+
+    .fixed2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    input {
+        border: 1px solid rgb(70, 5, 107);
+        border-radius: 4px;
+    }
+
+    .formulario {
+        background-color: rgb(233, 231, 233);
+        padding: 5%;
+        margin: 5% 5%;
+        border: 1px solid rgb(219, 213, 223);
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    input[type="motivo"] {
+        border-radius: 4px;
+        width: 50%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+    }
+
+    button {
+        color: rgb(1, 14, 22);
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 4px 3px;
+        cursor: pointer;
+        text-decoration: none;
+        background-color: rgb(40, 155, 221);
+        border-radius: 4px;
+        border: 1px solid rgb(93, 60, 116);
+        margin: 6%;
+        padding: 1%;
+    }
+
+    label {
+        margin: 2%;
+        padding-left: 4%;
+    }
+
+    .imagen_facebook {
+        width: 4%;
+    }
+
+    .footer {
+        display: flexbox;
+        justify-content: space-between;
+        color: aliceblue;
+        align-items: center;
+        padding: auto;
+        background-color: black;
+        position: relative;
+        margin-bottom: 5%;
+    }
+
+    .correo2 {
+        position: absolute;
+        margin-right: 10px;
+        align-items: center;
+        display: flex;
+        padding-right: 5%;
+        right: 0;
+        margin-left: 10px;
+    }
+
+    .facebook {
+        position: absolute;
+        margin-left: 10px;
+        align-items: center;
+        display: flex;
+    }
+
+    .texto_facebook {
+        text-align: center;
+        margin-top: 15px;
+    }
+
+    .imagen_logo {
+        width: 4%;
+    }
+
+    .aviso_copyrigth {
+        position: relative;
+        text-align: center;
+        flex-grow: 1;
+        font-size: 14px;
+    }
+
+    .imagen_correo {
+        width: 5%;
+    }
+
+    .texto_correo {
+        margin-left: 10px;
+    }
+}
+
+/* end contact */
+
+/* start about */
+#about {
+    .titulo {
+        text-align: center;
+        color: aliceblue;
+        font-style: oblique;
+        display: grid;
+        grid-row: 1;
+        grid-column: 1/2;
+        position: relative;
+        padding-left: 52%;
+        font-size: 355%;
+    }
+
+    .caja1{
+        border-radius: 5%;
+        background-color: rgb(10, 1, 46);
+        margin: 8%;
+        opacity: 1;
+        grid-template-columns: 1fr;
+        grid-template-rows: minmax(auto, 1fr);
+        color: rgb(247, 239, 244);
+        display: grid;
+        overflow: hidden;
+        position: relative;
+        padding: 20% 10%;
+    }
+    h3{
+        font-family: cursive;
+        letter-spacing: 2px;
+        font-size: 90%;
+        text-align: left;
+        grid-row: 1M/2;
+        grid-column: 1/2;
+    }
+
+    ul {
+        font-size: 110%;
+        font-style: oblique;
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+            "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        position: relative;
+        justify-content: space-around;
+        list-style-type: none;
+    }
+
+    li:hover a {
+        border-radius: 5%;
+        background-color: rgb(97, 20, 104);
+        position: relative;
+    }
+
+    a {
+        text-decoration: none;
+        color: aliceblue;
+        padding: 10px 15px;
+        display: block;
+        transition: background-color 0.3s ease;
+    }
+
+    .fixed {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    #video {
+        width: 180%;
+        margin: 10%;
+        border-radius: 30px;
+        position: relative;
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+
+    #audio {
+        display: none;
+    }
+
+    .imagen_facebook {
+        width: 4%;
+    }
+
+    .footer {
+        display: flexbox;
+        justify-content: space-between;
+        color: aliceblue;
+        align-items: center;
+        padding: auto;
+        background-color: black;
+        position: relative;
+        margin-bottom: 5%;
+    }
+
+    .correo {
+        position: absolute;
+        margin-right: 10px;
+        align-items: center;
+        display: flex;
+        padding-right: 5%;
+        right: 0;
+        margin-left: 10px;
+    }
+
+    .facebook {
+        position: absolute;
+        margin-left: 10px;
+        align-items: center;
+        display: flex;
+    }
+
+    .texto_facebook {
+        text-align: center;
+        margin-top: 15px;
+    }
+
+    .imagen_logo {
+        width: 4%;
+    }
+
+    .aviso_copyrigth {
+        position: relative;
+        text-align: center;
+        flex-grow: 1;
+        font-size: 14px;
+    }
+
+    .imagen_correo {
+        width: 5%;
+    }
+
+    .texto_correo {
+        margin-left: 10px;
+    }
+
+
+    #info {
+        height: 100vh;
+        article {
+            -webkit-box-shadow: 4px 4px 13px 0px rgba(0, 0, 0, 0.43);
+            -moz-box-shadow: 4px 4px 13px 0px rgba(0, 0, 0, 0.43);
+            box-shadow: 4px 4px 13px 0px rgba(0, 0, 0, 0.43);
+            border-radius: 15px;
+            -moz-border-radius: 15px;
+            -webkit-border-radius: 15px;
+            background-color: #d4b9ea;
+            border: 1px solid #000000;
+            margin-bottom: 5px;
+            padding: 30px;
+        }
+    }
+
+}
+
+/* end about */

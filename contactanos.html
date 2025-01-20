@@ -1,68 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="EstilosCSS/styles_contactanos.css" rel="stylesheet" type="text/css" />
-    <!--se adjuntan los estilos css al html-->
-    <title>Infinity</title>
-  </head>
-  <body>
-    <header>
-      <nav>
-        <ul>
-          <li><a href="./index.html">Inicio</a></li>
-          <li><a href="./AcercadeNosotros.html"> Acerca de nosotros</a></li>
-          <li><a href="./Servicios.html"> Servicios</a></li>
-          <li>
-            <a href="./contactanos.html">Contactanos</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-    <h2> CITAS O RESOLUCIONES</h2>
 
-    <div class="formulario">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="EstilosCSS/styles.css" rel="stylesheet" type="text/css" />
+  <!--se adjuntan los estilos css al html-->
+  <title>Infinity</title>
+</head>
 
-        <form action="formulario.php" method="POST">
+<body id="contact">
+  <header>
+    <nav>
+      <ul>
+        <li><a href="./index.html">Inicio</a></li>
+        <li><a href="./AcercadeNosotros.html"> Acerca de nosotros</a></li>
+        <li><a href="./Servicios.html"> Servicios</a></li>
+        <li>
+          <a href="./contactanos.html">Contactanos</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <h2> CITAS O RESOLUCIONES</h2>
 
-            <label for="nombre" class="nombre"> Nombre </label>
-            <input type="text" id="nombre" name="nombre" required>  
+  <div class="formulario">
 
-           <label for="apellido" class="apellido">Apellido</label>
-            <input type="text" id="apellido" name="apellido" required> 
-            <br>
-            <br>
-            <label for="telefono" class="telefono">Telefóno</label>
-            <input type="number" id="telefono" name="telefono" required>
-           
-            <label for="email" class="correo">Correo</label>
-            <input type="email" id="email" name="email" required>  
-           <br>
-           <br>
-            <label for="motivo" class="motivo_contacto">Motivo de contacto</label>
-            <input type="text" id="motivo" name="motivo" required>
-           <br>
-           <br>
-            <button> Enviar </button>
-        </form>
+    <form action="formulario.php" method="POST">
+
+      <label for="nombre" class="nombre"> Nombre </label>
+      <input type="text" id="nombre" name="nombre" required>
+
+      <label for="apellido" class="apellido">Apellido</label>
+      <input type="text" id="apellido" name="apellido" required>
+      <br>
+      <br>
+      <label for="telefono" class="telefono">Telefóno</label>
+      <input type="number" id="telefono" name="telefono" required>
+
+      <label for="email">Correo</label>
+      <input type="email" id="email" name="email" required>
+      <br>
+      <br>
+      <label for="motivo" class="motivo_contacto">Motivo de contacto</label>
+      <input type="text" id="motivo" name="motivo" required>
+      <br>
+      <br>
+      <button> Enviar </button>
+    </form>
 
 
-    </div>
+  </div>
 
-    <div class="footer">
-      <footer > 
-      
+  <div class="footer">
+    <footer>
+
       <div class="aviso_copyrigth">
-      Copyrigth c 2024 Coding artist | All Rights Reserved <img src="imagenes/logo_empresa.png" class="imagen_logo" alt="logo_empresa"/>
+        Copyrigth c 2024 Coding artist | All Rights Reserved <img src="imagenes/logo_empresa.png" class="imagen_logo"
+          alt="logo_empresa" />
       </div>
-      <div class="facebook"><img src="imagenes/facebook.png" class="imagen_facebook" alt="imagen_facebook"/>
-          <span class="texto_facebook"> Infinity</span></div>
-      <div class="correo2"><img src="imagenes/correo.png" class="imagen_correo" alt="imagen_correo"/>
-          <span class="texto_correo">infinity@hotmail.com</span></div>
-      </footer>
-    </div>
+      <div class="facebook"><img src="imagenes/facebook.png" class="imagen_facebook" alt="imagen_facebook" />
+        <span class="texto_facebook"> Infinity</span>
+      </div>
+      <div class="correo2"><img src="imagenes/correo.png" class="imagen_correo" alt="imagen_correo" />
+        <span class="texto_correo">infinity@hotmail.com</span>
+      </div>
+    </footer>
+  </div>
 
 
-  </body>
+</body>
+
 </html>
