@@ -1,77 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="EstilosCSS/styles_AcercadeNosotros.css" rel="stylesheet" type="text/css" />
-    <!--se adjuntan los estilos css al html-->
-    <title>Infinity</title>
-  </head>
-  <body>
-    <header>
-      <nav>
-        <ul>
-          <li><a href="./index.html">Inicio</a></li>
-          <li><a href="#"> Acerca de nosotros</a></li>
-          <li><a href="./Servicios.html"> Servicios</a></li>
-          <li>
-            <a href="./contactanos.html">Contactanos</a>
-          </li>
-        </ul>
-      </nav>
-     
-    </header>
-    <main><article class="fixed">
-      
-      <h2>Somos una empresa dedicada a servicios de belleza con certificados internacionales realizados
-        en brazil. Ofrecemos diversos tratamientos con profesionales expertos en su área, se utilizan 
-        productos de alta calidad para mayores resultados !Enfocate en tu belleza, y deja salir tu diamante en bruto!
-      </h2> 
-     
-        <video id="video" src="video/video_servicio.mp4" controls >video_Local</video>
-        <audio id="audio" src="video/audio_presentacion.mp3" controls>audio_presentacion</audio>
-     
-    </article></main>
- 
-    
-    <script>
-      document.addEventListener('DOMContentLoaded',()=>{
-        //encuentra los documentos del DOM
-       const video=document.getElementById("video");
-       const audio=document.getElementById("audio");
-      
-        video.play();
-        audio.volume=0.2;
-      
-       video.addEventListener('play', ()=> 
-       {
-        console.log('El video ha comenzado a reproducirse.');
-        audio.currentTime=video.currentTime;
-        audio.play();
-    
-        });
-       video.addEventListener('pause', () => audio.pause());
-       
-         //sincronización de audio y video
-       video.addEventListener('seeked',()=>{
-         audio.currentTime=video.currentTime;
-       });
-      });
-    </script>
 
-    <div class="footer">
-      <footer > 
-      
-      <div class="aviso_copyrigth">
-      Copyrigth c 2024 Coding artist | All Rights Reserved <img src="imagenes/logo_empresa.png" class="imagen_logo" alt="logo_empresa"/>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="EstilosCSS/styles.css" rel="stylesheet" type="text/css" />
+  <!--se adjuntan los estilos css al html-->
+  <title>Infinity</title>
+</head>
+
+<body id="about">
+  <header>
+    <nav>
+      <ul>
+        <li><a href="./index.html">Inicio</a></li>
+        <li><a href="#"> Acerca de nosotros</a></li>
+        <li><a href="./Servicios.html"> Servicios</a></li>
+        <li>
+          <a href="./contactanos.html">Contactanos</a>
+        </li>
+      </ul>
+    </nav>
+
+  </header>
+  <main>
+    <article class="fixed">
+      <video id="video" src="video/video_servicio.mp4" controls>video_Local</video>
+      <audio id="audio" src="video/audio_presentacion.mp3" controls>audio_presentacion</audio>
+      <div class="caja1">
+        <h3>Somos una empresa dedicada a servicios de belleza con certificados internacionales realizados
+          en brazil. Ofrecemos diversos tratamientos con profesionales expertos en su área, se utilizan
+          productos de alta calidad para mayores resultados !Enfocate en tu belleza, y deja salir tu diamante en bruto!
+        </h3>
       </div>
-      <div class="facebook"><img src="imagenes/facebook.png" class="imagen_facebook" alt="imagen_facebook"/>
-          <span class="texto_facebook"> Infinity</span></div>
-      <div class="correo"><img src="imagenes/correo.png" class="imagen_correo" alt="imagen_correo"/>
-          <span class="texto_correo">infinity@hotmail.com</span></div>
-      </footer>
-    </div>
-  </body>
-
+    </article>
   
+    <section id="info">
+      <article>
+        <div>
+          <h3>Uas acrilicas</h3>
+          <p>djglksdfgklsgkhsdgjdklgkdlgkglksdjgl</p>
+        </div>
+      </article>
+      <article>
+        <h3>Tipos de tites</h3>
+        <p>khjfgskjdfghdggjkhdjkghhkjhkshgkjdhfghgkjfhjkjkfjkf</p>
+      </article>
+      <article>
+        <h3>Tipos de tites</h3>
+        <p>khjfgskjdfghdggjkhdjkghhkjhkshgkjdhfghgkjfhjkjkfjkf</p>
+      </article>
+      <article>
+        <h3>Tipos de tites</h3>
+        <p>khjfgskjdfghdggjkhdjkghhkjhkshgkjdhfghgkjfhjkjkfjkf</p>
+      </article>
+    </section>
+  </main>
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      //encuentra los documentos del DOM
+      const video = document.getElementById("video");
+      const audio = document.getElementById("audio");
+
+      video.play();
+      audio.volume = 0.2;
+
+      video.addEventListener('play', () => {
+        console.log('El video ha comenzado a reproducirse.');
+        audio.currentTime = video.currentTime;
+        audio.play();
+
+      });
+      video.addEventListener('pause', () => audio.pause());
+
+      //sincronización de audio y video
+      video.addEventListener('seeked', () => {
+        audio.currentTime = video.currentTime;
+      });
+    });
+  </script>
+
+  <div class="footer">
+    <footer>
+
+      <div class="aviso_copyrigth">
+        Copyrigth c 2024 Coding artist | All Rights Reserved <img src="imagenes/logo_empresa.png" class="imagen_logo"
+          alt="logo_empresa" />
+      </div>
+      <div class="facebook"><img src="imagenes/facebook.png" class="imagen_facebook" alt="imagen_facebook" />
+        <span class="texto_facebook"> Infinity</span>
+      </div>
+      <div class="correo"><img src="imagenes/correo.png" class="imagen_correo" alt="imagen_correo" />
+        <span class="texto_correo">infinity@hotmail.com</span>
+      </div>
+    </footer>
+  </div>
+</body>
+
+
 </html>
